@@ -1,0 +1,14 @@
+# Ignore Visual Studio build files
+TechTonicAPI/bin/
+TechTonicAPI/obj/
+*.user
+*.suo
+*.vs
+
+# Ignore Angular build files
+techtonic/node_modules/
+techtonic/dist/
+.env
+
+# Ignore IDE settings
+.vscode/

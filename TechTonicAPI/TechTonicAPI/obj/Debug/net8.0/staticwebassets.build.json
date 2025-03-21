@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "LhMNfXemWDAGYgJ4ozJwqqwwLmvGE2REKnpslZl5S7U=",
+  "Source": "TechTonicAPI",
+  "BasePath": "_content/TechTonicAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
