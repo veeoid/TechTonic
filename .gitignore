@@ -8,6 +8,8 @@ TechTonicAPI/obj/
 # Ignore Angular build files
 techtonic/node_modules/
 techtonic/dist/
+!techtonic/
+
 .env
 
 # Ignore IDE settings
