@@ -1,59 +1,103 @@
-# Techtonic
+# TechTonic - Business Management System
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.4.
+TechTonic is a modern, full-stack business management system built with Angular 19 and .NET Core Web API. It provides a comprehensive solution for managing customers, inventory, and business analytics.
 
-## Development server
+## Features
 
-To start a local development server, run:
+### Customer Management
+- Add, edit, and delete customer records
+- View customer details including registration dates
+- Track customer growth over time
 
+### Inventory Management
+- Manage product inventory
+- Track stock levels
+- Categorize products
+- Monitor inventory value
+
+### Analytics Dashboard
+- Real-time business metrics
+- Customer growth visualization
+- Inventory distribution analysis
+- Total inventory value tracking
+- Recent customer activity
+
+## Tech Stack
+
+### Frontend
+- Angular 19
+- TypeScript
+- Bootstrap 5
+- Chart.js for data visualization
+- NgBootstrap for UI components
+
+### Backend
+- .NET Core Web API
+- Entity Framework Core
+- SQL Server Database
+- RESTful API architecture
+
+## Getting Started
+
+### Prerequisites
+- Node.js (v18 or higher)
+- .NET 8 SDK
+- SQL Server
+- Angular CLI
+
+### Installation
+
+1. Clone the repository:
 ```bash
+git clone https://github.com/veeoid/TechTonic.git
+```
+
+2. Frontend Setup:
+```bash
+cd techtonic
+npm install
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
+3. Backend Setup:
 ```bash
-ng generate component component-name
+cd TechTonicAPI
+dotnet restore
+dotnet run
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
+4. Database Setup:
+- Update the connection string in `TechTonicAPI/appsettings.json`
+- Run database migrations:
 ```bash
-ng generate --help
+dotnet ef database update
 ```
 
-## Building
+## API Endpoints
 
-To build the project run:
+### Customer API
+- GET /api/Customer - Get all customers
+- POST /api/Customer - Create new customer
+- PUT /api/Customer - Update customer
+- DELETE /api/Customer - Delete customer
 
-```bash
-ng build
-```
+### Inventory API
+- GET /api/Inventory - Get all inventory items
+- POST /api/Inventory - Add new inventory item
+- PUT /api/Inventory - Update inventory item
+- DELETE /api/Inventory - Delete inventory item
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## Contributing
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-## Running unit tests
+## License
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Acknowledgments
+- Angular team for the amazing framework
+- Bootstrap team for the UI components
+- Chart.js team for the visualization library
