@@ -50,7 +50,14 @@ export class CustomerComponent {
   deleteCustomer(customerId: any) {
     let apiUrl = "https://localhost:7224/api/Customer?customerId=";
     console.log(customerId);
-    this.httpClient.delete(apiUrl + customerId).subscribe()
+    this.httpClient.delete(apiUrl + customerId).subscribe({
+      next: () => {
+        this.getCustomerDetails();
+      },
+      error: (error) => {
+        console.error('Error deleting customer:', error);
+      }
+    });
   }
 
   openEditDialog(customer: any) {

@@ -1,0 +1,14 @@
+<div class="home-container">
+  <div class="hero-section">
+    <h1>Welcome to TechTonic</h1>
+    <p class="subtitle">Your Complete Business Management Solution</p>
+  </div>
+
+  <div class="features-grid">
+    <div class="feature-card" *ngFor="let feature of features" [routerLink]="feature.route">
+      <div class="feature-icon">{{feature.icon}}</div>
+      <h3>{{feature.title}}</h3>
+      <p>{{feature.description}}</p>
+    </div>
+  </div>
+</div> 

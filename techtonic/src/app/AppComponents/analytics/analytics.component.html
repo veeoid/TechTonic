@@ -1,0 +1,69 @@
+<div class="analytics-container">
+  <!-- Statistics Cards -->
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="stat-icon">👥</div>
+      <div class="stat-content">
+        <h3>Total Customers</h3>
+        <p class="stat-value">{{totalCustomers}}</p>
+      </div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon">📦</div>
+      <div class="stat-content">
+        <h3>Total Inventory Items</h3>
+        <p class="stat-value">{{totalInventory}}</p>
+      </div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon">💰</div>
+      <div class="stat-content">
+        <h3>Total Inventory Value</h3>
+        <p class="stat-value">${{totalValue | number:'1.2-2'}}</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Charts Section -->
+  <div class="charts-grid">
+    <div class="chart-card">
+      <h3>Customer Growth</h3>
+      <canvas baseChart
+        [data]="customerGrowthChartData"
+        [options]="chartOptions"
+        type="line">
+      </canvas>
+    </div>
+    <div class="chart-card">
+      <h3>Inventory Distribution</h3>
+      <canvas baseChart
+        [data]="inventoryDistributionChartData"
+        [options]="doughnutOptions"
+        type="doughnut">
+      </canvas>
+    </div>
+  </div>
+
+  <!-- Recent Customers Table -->
+  <div class="recent-customers">
+    <h3>Recent Customers</h3>
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Registration Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let customer of recentCustomers">
+            <td>{{customer.firstName}} {{customer.lastName}}</td>
+            <td>{{customer.email}}</td>
+            <td>{{customer.registrationDate | date:'mediumDate'}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div> 
