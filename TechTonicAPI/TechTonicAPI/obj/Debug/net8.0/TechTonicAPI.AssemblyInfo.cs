@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TechTonicAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d4a626327a60644b6ff5e443f6d9051185e050fc")]
 [assembly: System.Reflection.AssemblyProductAttribute("TechTonicAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TechTonicAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

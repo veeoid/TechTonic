@@ -40,3 +40,4 @@ D:\Projects_to_host\TechTonic\TechTonicAPI\TechTonicAPI\obj\Debug\net8.0\refint\
 D:\Projects_to_host\TechTonic\TechTonicAPI\TechTonicAPI\obj\Debug\net8.0\TechTonicAPI.pdb
 D:\Projects_to_host\TechTonic\TechTonicAPI\TechTonicAPI\obj\Debug\net8.0\TechTonicAPI.genruntimeconfig.cache
 D:\Projects_to_host\TechTonic\TechTonicAPI\TechTonicAPI\obj\Debug\net8.0\ref\TechTonicAPI.dll
+D:\Projects_to_host\TechTonic\TechTonicAPI\TechTonicAPI\obj\Debug\net8.0\TechTonicAPI.sourcelink.json

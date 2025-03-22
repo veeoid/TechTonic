@@ -1,5 +1,63 @@
 [
   {
+    "ContainingType": "TechTonicAPI.Controllers.CustomerController",
+    "Method": "SaveCustomerData",
+    "RelativePath": "api/Customer",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "requestDto",
+        "Type": "TechTonicAPI.Models.CustomerRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TechTonicAPI.Controllers.CustomerController",
+    "Method": "GetCutomerData",
+    "RelativePath": "api/Customer",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TechTonicAPI.Controllers.CustomerController",
+    "Method": "DeleteCustomerData",
+    "RelativePath": "api/Customer",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "customerId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TechTonicAPI.Controllers.CustomerController",
+    "Method": "UpdateCustomerData",
+    "RelativePath": "api/Customer",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "customerRequest",
+        "Type": "TechTonicAPI.Models.CustomerRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "TechTonicAPI.Controllers.InventoryController",
     "Method": "SaveInventoryData",
     "RelativePath": "api/Inventory",
@@ -37,6 +95,22 @@
         "Name": "productId",
         "Type": "System.Int32",
         "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TechTonicAPI.Controllers.InventoryController",
+    "Method": "UpdateInventoryData",
+    "RelativePath": "api/Inventory",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "inventoryRequest",
+        "Type": "TechTonicAPI.Models.InventoryRequestDto",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []

@@ -26,11 +26,12 @@ namespace TechTonicAPI.Controllers
                 CommandType = CommandType.StoredProcedure,
                 Connection = connection
             };
-            command.Parameters.AddWithValue("@ProductId", requestDto.ProductId);
+			connection.Open();
+			command.Parameters.AddWithValue("@ProductId", requestDto.ProductId);
             command.Parameters.AddWithValue("@ProductName", requestDto.ProductName);
             command.Parameters.AddWithValue("@AvailableQty", requestDto.AvailableQty);
             command.Parameters.AddWithValue("@ReOrderPoint", requestDto.ReOrderPoint);
-            connection.Open();
+            
             command.ExecuteNonQuery();
             connection.Close();
             return Ok();
@@ -86,9 +87,35 @@ namespace TechTonicAPI.Controllers
 				CommandType = CommandType.StoredProcedure,
 				Connection = connection
 			};
-			command.Parameters.AddWithValue("@ProductId", productId);
+			
 			connection.Open();
+			command.Parameters.AddWithValue("@ProductId", productId);
+			command.ExecuteNonQuery();
+			connection.Close();
+			return Ok();
 
+		}
+
+		[HttpPut]
+		public ActionResult UpdateInventoryData(InventoryRequestDto inventoryRequest)
+		{
+			SqlConnection connection = new SqlConnection
+			{
+				ConnectionString = "Server=localhost\\SQLEXPRESS;Database=techtonic;Trusted_Connection=True;"
+			};
+
+			SqlCommand command = new SqlCommand
+			{
+				CommandText = "sp_UpdateInventoryData",
+				CommandType = CommandType.StoredProcedure,
+				Connection = connection
+			};
+			
+			connection.Open();
+            command.Parameters.AddWithValue("@ProductId", inventoryRequest.ProductId);
+			command.Parameters.AddWithValue("@ProductName", inventoryRequest.ProductName);
+            command.Parameters.AddWithValue("@AvailableQty", inventoryRequest.AvailableQty);
+			command.Parameters.AddWithValue("@ReOrderPoint", inventoryRequest.ReOrderPoint);
 			command.ExecuteNonQuery();
 			connection.Close();
 			return Ok();
